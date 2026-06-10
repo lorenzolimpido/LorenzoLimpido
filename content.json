@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "title": "Lorenzo Limpido — DJ",
+    "description": "Musica e eventi privati.",
+    "accent": "#a78bfa",
+    "accent2": "#22d3ee"
+  },
+  "logo": "assets/images/logo-5.png",
+  "heroImage": "assets/images/hero.avif",
+  "logoCaption": "DJ · Live · Club",
+  "eyebrow": "",
+  "name": "Lorenzo Limpido",
+  "tagline": "Selezioni, set e serate nel buio delle migliori piste.",
+
+  "profileTitle": "Chi sono",
+  "photo": "assets/images/foto_limpido.jpg",
+  "intro": "Sono Lorenzo Limpido, DJ. Suono nei club, ai festival e agli eventi privati. Disponibile per serate, eventi privati e residency.",
+  "genresLabel": "Generi",
+  "genres": ["House", "Tech House", "Disco", "Commerciale"],
+  "actions": [
+    { "label": "Contattami", "url": "mailto:booking@example.com", "primary": true }
+  ],
+
+  "contactTitle": "Contatti & Social",
+  "contactText": "",
+  "info": [
+    { "label": "Instagram", "value": "@lorenzolimpido", "url": "https://www.instagram.com/lorenzolimpido/" },
+    { "label": "Email", "value": "booking@example.com", "url": "mailto:booking@example.com" },
+    { "label": "Location", "value": "Bra · CN · IT" },
+    { "label": "Per", "value": "Club · Feste · Eventi privati · Residency" }
+  ],
+  "links": [
+    { "label": "Instagram", "url": "https://www.instagram.com/lorenzolimpido/" }
+  ],
+
+  "footer": {
+    "brand": "Lorenzo Limpido · DJ",
+    "lines": [
+      "Sito personale a scopo informativo e di presentazione artistica",
+      "Per booking ed eventi: booking@example.com",
+      "Bra (CN) · Italia",
+      "CF: codicefiscale"
+    ],
+    "copyright": "© 2026 Lorenzo Limpido — Tutti i diritti riservati. Marchi, loghi e immagini sono dei rispettivi proprietari."
+  }
+}
