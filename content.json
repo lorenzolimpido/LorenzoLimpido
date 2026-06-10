@@ -6,7 +6,7 @@
     "accent2": "#22d3ee"
   },
   "logo": "assets/images/logo-5.png",
-  "heroImage": "assets/images/hero.avif",
+  "heroImage": "assets/images/hero-crowd.jpg",
   "logoCaption": "DJ · Live · Club",
   "eyebrow": "",
   "name": "Lorenzo Limpido",
@@ -38,8 +38,7 @@
     "lines": [
       "Sito personale a scopo informativo e di presentazione artistica",
       "Per booking ed eventi: booking@example.com",
-      "Bra (CN) · Italia",
-      "CF: codicefiscale"
+      "Bra (CN) · Italia"
     ],
     "copyright": "© 2026 Lorenzo Limpido — Tutti i diritti riservati. Marchi, loghi e immagini sono dei rispettivi proprietari."
   }
