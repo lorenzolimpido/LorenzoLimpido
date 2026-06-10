@@ -24,7 +24,7 @@
   "contactTitle": "Contatti & Social",
   "contactText": "",
   "info": [
-    { "label": "Instagram", "value": "@lorenzolimpido", "url": "https://www.instagram.com/lorenzolimpido/" },
+    { "label": "Instagram", "value": "@lorenzolimpido", "url": "https://www.instagram.com/lorenzolimpido" },
     { "label": "Email", "value": "booking@example.com", "url": "mailto:booking@example.com" },
     { "label": "Location", "value": "Bra · CN · IT" },
     { "label": "Per", "value": "Club · Feste · Eventi privati · Residency" }
