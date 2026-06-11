@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Cursor / Claude (config locale)
+.cursor/
+.claude/
+
+# Dipendenze e segreti (se aggiunti in futuro)
+node_modules/
+.env
+.env.*

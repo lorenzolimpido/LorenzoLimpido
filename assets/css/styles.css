@@ -116,7 +116,7 @@ body {
 }
 
 .hero-scroll {
-  position: absolute;
+  /* position: absolute; */
   bottom: 24px;
   z-index: 1;
   font-size: 11px;
@@ -274,7 +274,7 @@ body {
   color: var(--muted);
 }
 
-.info a { color: var(--accent-2); text-decoration: none; }
+.info a { color: var(--accent-2); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
 .info a:hover { text-decoration: underline; }
 
 .links {
@@ -290,9 +290,19 @@ body {
   color: var(--muted);
   text-decoration: none;
   transition: color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .links a:hover { color: var(--accent); }
+
+.social-icon {
+  width: 1.1em;
+  height: 1.1em;
+  flex: none;
+  vertical-align: middle;
+}
 
 /* FOOTER */
 .site-footer {
@@ -358,6 +368,7 @@ body {
 @media (max-width: 720px) {
   .grid { grid-template-columns: 1fr; }
   .profile { flex-direction: column; align-items: center; text-align: center; }
+  .genre-list { justify-content: center; }
   .actions { justify-content: center; }
 }
 
@@ -403,3 +414,71 @@ body {
   .hero-content, .hero-scroll { animation: none; }
   .btn { transition: none; }
 }
+
+/* ---------- PAGINE LEGALI ---------- */
+.legal-page {
+  padding-top: clamp(32px, 6vw, 64px);
+}
+
+.legal-card {
+  padding: clamp(28px, 5vw, 44px);
+  max-width: 720px;
+  margin: 0 auto 24px;
+}
+
+.legal-back {
+  margin-bottom: 20px;
+}
+
+.legal-back a {
+  color: var(--accent-2);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.legal-back a:hover { text-decoration: underline; }
+
+.legal-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.legal-updated {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 28px;
+}
+
+.legal-section {
+  margin-bottom: 24px;
+}
+
+.legal-section h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.legal-section p,
+.legal-section li {
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.legal-section ul {
+  margin: 10px 0 10px 20px;
+}
+
+.legal-section a {
+  color: var(--accent-2);
+  text-decoration: none;
+}
+
+.legal-section a:hover { text-decoration: underline; }

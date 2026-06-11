@@ -1,33 +1,33 @@
 {
   "meta": {
     "title": "Lorenzo Limpido — DJ",
-    "description": "Musica e eventi privati.",
+    "description": "DJ per club, festival ed eventi privati. Bra, Cuneo.",
     "accent": "#a78bfa",
     "accent2": "#22d3ee"
   },
-  "logo": "assets/images/logo-5.png",
+  "logo": "assets/images/logo.png",
   "heroImage": "assets/images/hero-crowd.jpg",
   "logoCaption": "DJ · Live · Club",
   "eyebrow": "",
   "name": "Lorenzo Limpido",
-  "tagline": "Selezioni, set e serate nel buio delle migliori piste.",
+  "tagline": "House, disco e tech house. Dal club alla festa, fino all'alba.",
 
   "profileTitle": "Chi sono",
   "photo": "assets/images/foto_limpido.jpg",
-  "intro": "Sono Lorenzo Limpido, DJ. Suono nei club, ai festival e agli eventi privati. Disponibile per serate, eventi privati e residency.",
+  "intro": "Sono Lorenzo Limpido, DJ di Bra. Suono house, tech house, disco e commerciale nei club, ai festival e agli eventi privati. Disponibile per serate, residency e feste private.",
   "genresLabel": "Generi",
   "genres": ["House", "Tech House", "Disco", "Commerciale"],
   "actions": [
-    { "label": "Contattami", "url": "mailto:lorenzolimpido@outlook.com", "primary": true }
+    { "label": "Scrivimi", "url": "mailto:lorenzolimpido@outlook.com", "primary": true }
   ],
 
-  "contactTitle": "Contatti & Social",
+  "contactTitle": "Contatti",
   "contactText": "",
   "info": [
     { "label": "Instagram", "value": "@lorenzolimpido", "url": "https://www.instagram.com/lorenzolimpido" },
     { "label": "Email", "value": "lorenzolimpido@outlook.com", "url": "mailto:lorenzolimpido@outlook.com" },
-    { "label": "Location", "value": "Bra · CN · IT" },
-    { "label": "Per", "value": "Club · Feste · Eventi privati · Residency" }
+    { "label": "Zona", "value": "Bra · CN · IT" },
+    { "label": "Disponibile per", "value": "Club · Feste · Eventi privati · Residency" }
   ],
   "links": [
     { "label": "Instagram", "url": "https://www.instagram.com/lorenzolimpido" }
@@ -36,10 +36,13 @@
   "footer": {
     "brand": "Lorenzo Limpido · DJ",
     "lines": [
-      "Sito personale a scopo informativo e di presentazione artistica",
-      "Per booking ed eventi: lorenzolimpido@outlook.com",
+      "Sito di presentazione artistica",
+      "Booking ed eventi: lorenzolimpido@outlook.com",
       "Bra (CN) · Italia"
     ],
-    "copyright": "© 2026 Lorenzo Limpido — Tutti i diritti riservati. Marchi, loghi e immagini sono dei rispettivi proprietari."
+    "legal": [
+      { "label": "Privacy", "url": "privacy.html" }
+    ],
+    "copyright": "© 2026 Lorenzo Limpido — Tutti i diritti riservati."
   }
 }

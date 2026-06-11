@@ -1,3 +1,11 @@
+const ICONS = {
+  instagram: `<svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>`
+};
+
+function iconFor(label) {
+  return ICONS[(label || "").toLowerCase()] || "";
+}
+
 // Carica i contenuti dal file JSON e li inserisce nella pagina.
 async function init() {
   let data;
@@ -87,7 +95,7 @@ async function init() {
     if (i.url) {
       const a = document.createElement("a");
       a.href = i.url;
-      a.textContent = i.value || i.url;
+      a.innerHTML = iconFor(i.label) + (i.value || i.url);
       if (/^https?:/.test(i.url)) { a.target = "_blank"; a.rel = "noopener"; }
       li.appendChild(a);
     } else {
@@ -101,7 +109,7 @@ async function init() {
   (data.links || []).forEach((l) => {
     const link = document.createElement("a");
     link.href = l.url;
-    link.textContent = l.label;
+    link.innerHTML = iconFor(l.label) + l.label;
     link.target = "_blank";
     link.rel = "noopener";
     links.appendChild(link);
