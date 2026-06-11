@@ -18,14 +18,14 @@
   "genresLabel": "Generi",
   "genres": ["House", "Tech House", "Disco", "Commerciale"],
   "actions": [
-    { "label": "Contattami", "url": "mailto:booking@example.com", "primary": true }
+    { "label": "Contattami", "url": "mailto:lorenzolimpido@outlook.com", "primary": true }
   ],
 
   "contactTitle": "Contatti & Social",
   "contactText": "",
   "info": [
     { "label": "Instagram", "value": "@lorenzolimpido", "url": "https://www.instagram.com/lorenzolimpido" },
-    { "label": "Email", "value": "booking@example.com", "url": "mailto:booking@example.com" },
+    { "label": "Email", "value": "lorenzolimpido@outlook.com", "url": "mailto:lorenzolimpido@outlook.com" },
     { "label": "Location", "value": "Bra · CN · IT" },
     { "label": "Per", "value": "Club · Feste · Eventi privati · Residency" }
   ],
@@ -37,7 +37,7 @@
     "brand": "Lorenzo Limpido · DJ",
     "lines": [
       "Sito personale a scopo informativo e di presentazione artistica",
-      "Per booking ed eventi: booking@example.com",
+      "Per booking ed eventi: lorenzolimpido@outlook.com",
       "Bra (CN) · Italia"
     ],
     "copyright": "© 2026 Lorenzo Limpido — Tutti i diritti riservati. Marchi, loghi e immagini sono dei rispettivi proprietari."
