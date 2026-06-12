@@ -13,6 +13,8 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+html { scroll-behavior: smooth; }
+
 body {
   background: var(--paper);
   color: var(--ink);
@@ -23,7 +25,7 @@ body {
 /* ---------- HERO ---------- */
 .hero {
   position: relative;
-  min-height: 52svh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -116,14 +118,52 @@ body {
 }
 
 .hero-scroll {
-  /* position: absolute; */
-  bottom: 24px;
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
-  font-size: 11px;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--muted);
-  animation: bob 1.8s ease-in-out infinite;
+  color: color-mix(in srgb, var(--ink) 72%, transparent);
+  line-height: 0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.hero-scroll:hover,
+.hero-scroll:focus-visible {
+  color: var(--ink);
+}
+
+.hero-scroll:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 6px;
+  border-radius: 50%;
+}
+
+.hero-scroll-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.hero-scroll-pulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: scroll-pulse 2s cubic-bezier(0.4, 0.01, 0.165, 0.99) infinite;
+}
+
+.hero-scroll svg {
+  position: relative;
+  z-index: 1;
+  width: 22px;
+  height: 22px;
 }
 
 /* ---------- CONTENUTO ---------- */
@@ -381,10 +421,43 @@ body {
   :root { --maxw: 1380px; }
 }
 
-/* ---------- DESKTOP: testi un po' più grandi (tranne il titolone) ---------- */
+/* ---------- DESKTOP: hero più ingombrante + testi più grandi ---------- */
 @media (min-width: 900px) {
-  .eyebrow { font-size: 15px; }
-  .tagline { font-size: 23px; }
+  .hero-logo {
+    width: min(540px, 42vw);
+    filter: drop-shadow(0 0 48px color-mix(in srgb, var(--accent) 50%, transparent));
+  }
+
+  .logo-caption {
+    font-size: clamp(10px, 1.35vw, 15px);
+    letter-spacing: 0.28em;
+  }
+
+  .name {
+    font-size: clamp(52px, 7vw, 100px);
+  }
+
+  .eyebrow {
+    margin-top: 22px;
+    font-size: 16px;
+  }
+
+  .tagline {
+    margin-top: 20px;
+    max-width: 34ch;
+    font-size: 25px;
+  }
+
+  .hero-scroll-icon {
+    width: 76px;
+    height: 76px;
+  }
+
+  .hero-scroll svg {
+    width: 26px;
+    height: 26px;
+  }
+
   .card-title { font-size: 16px; }
   .intro { font-size: 20px; }
   .genres-label { font-size: 14px; }
@@ -405,13 +478,16 @@ body {
   to { opacity: 1; transform: none; }
 }
 
-@keyframes bob {
-  0%, 100% { transform: translateY(0); opacity: 0.7; }
-  50% { transform: translateY(6px); opacity: 1; }
+@keyframes scroll-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(243, 243, 248, 0.26); }
+  70% { box-shadow: 0 0 0 1.5em rgba(243, 243, 248, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(243, 243, 248, 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-content, .hero-scroll { animation: none; }
+  html { scroll-behavior: auto; }
+  .hero-content { animation: none; }
+  .hero-scroll-pulse { animation: none; }
   .btn { transition: none; }
   [data-aos] {
     opacity: 1 !important;

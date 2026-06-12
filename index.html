@@ -25,11 +25,18 @@
       <h1 class="name" id="name"></h1>
       <p class="tagline" id="tagline"></p>
     </div>
-    <div class="hero-scroll" aria-hidden="true">scorri</div>
+    <a href="#content" class="hero-scroll" aria-label="Scorri al contenuto">
+      <span class="hero-scroll-icon">
+        <span class="hero-scroll-pulse" aria-hidden="true"></span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </span>
+    </a>
   </header>
 
   <!-- CONTENUTO -->
-  <main class="container">
+  <main class="container" id="content">
     <div class="grid">
       <!-- CARD PROFILO (sinistra) con foto tonda -->
       <article class="card profile" data-aos="fade-up" data-aos-duration="800">
