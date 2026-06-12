@@ -11,6 +11,11 @@
   <link rel="stylesheet" href="assets/css/aos.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script>
+    if (location.hash) {
+      history.replaceState(null, "", location.pathname + location.search);
+    }
+  </script>
 </head>
 <body aria-busy="true">
   <!-- HERO a tutto schermo -->

@@ -13,8 +13,6 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
-
 body {
   background: var(--paper);
   color: var(--ink);
@@ -485,7 +483,6 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
   .hero-content { animation: none; }
   .hero-scroll-pulse { animation: none; }
   .btn { transition: none; }

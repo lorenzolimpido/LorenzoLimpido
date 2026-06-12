@@ -17,6 +17,50 @@ function initScrollAnimations() {
   });
 }
 
+function clearPageHash() {
+  if (location.hash) {
+    history.replaceState(null, "", location.pathname + location.search);
+  }
+}
+
+function smoothScrollTo(targetY, duration) {
+  const startY = window.scrollY;
+  const distance = targetY - startY;
+  const startTime = performance.now();
+
+  return new Promise((resolve) => {
+    function step(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      window.scrollTo(0, startY + distance * eased);
+      if (progress < 1) requestAnimationFrame(step);
+      else resolve();
+    }
+    requestAnimationFrame(step);
+  });
+}
+
+function initHeroScroll() {
+  const link = document.querySelector(".hero-scroll");
+  const target = document.getElementById("content");
+  if (!link || !target) return;
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const top = target.getBoundingClientRect().top + window.scrollY;
+
+    if (prefersReducedMotion) {
+      window.scrollTo(0, top);
+      clearPageHash();
+      return;
+    }
+
+    smoothScrollTo(top, 1300).then(clearPageHash);
+  });
+}
+
 // Carica i contenuti dal file JSON e li inserisce nella pagina.
 async function init() {
   let data;
@@ -160,4 +204,5 @@ async function init() {
   initScrollAnimations();
 }
 
+initHeroScroll();
 init();
