@@ -413,6 +413,11 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .hero-content, .hero-scroll { animation: none; }
   .btn { transition: none; }
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
 
 /* ---------- PAGINE LEGALI ---------- */

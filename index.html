@@ -8,6 +8,7 @@
   <title>Caricamento…</title>
   <meta name="description" content="" id="meta-description" />
   <link rel="stylesheet" href="assets/css/fonts.css" />
+  <link rel="stylesheet" href="assets/css/aos.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -31,8 +32,8 @@
   <main class="container">
     <div class="grid">
       <!-- CARD PROFILO (sinistra) con foto tonda -->
-      <article class="card profile">
-        <img class="photo" id="photo" alt="" />
+      <article class="card profile" data-aos="fade-up" data-aos-duration="800">
+        <img class="photo" id="photo" alt="" data-aos="zoom-in" data-aos-delay="150" />
         <div class="profile-body">
           <h2 class="card-title" id="profile-title"></h2>
           <p class="intro" id="intro"></p>
@@ -45,7 +46,7 @@
       </article>
 
       <!-- BOX CONTATTI (destra) -->
-      <aside class="card contact">
+      <aside class="card contact" data-aos="fade-up" data-aos-delay="150" data-aos-duration="800">
         <h2 class="card-title" id="contact-title"></h2>
         <p class="intro" id="contact-text"></p>
         <ul class="info" id="info"></ul>
@@ -54,7 +55,7 @@
     </div>
 
     <!-- FOOTER box -->
-    <footer class="card site-footer">
+    <footer class="card site-footer" data-aos="fade-up" data-aos-delay="250">
       <p class="footer-brand" id="footer-brand"></p>
       <p class="footer-lines" id="footer-lines"></p>
       <nav class="footer-legal" id="footer-legal" aria-label="Note legali"></nav>
@@ -62,6 +63,7 @@
     </footer>
   </main>
 
+  <script src="assets/js/aos.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

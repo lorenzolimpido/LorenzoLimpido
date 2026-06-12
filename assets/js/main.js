@@ -6,6 +6,17 @@ function iconFor(label) {
   return ICONS[(label || "").toLowerCase()] || "";
 }
 
+function initScrollAnimations() {
+  if (typeof AOS === "undefined") return;
+  AOS.init({
+    duration: 700,
+    easing: "ease-out-cubic",
+    once: true,
+    offset: 80,
+    disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+  });
+}
+
 // Carica i contenuti dal file JSON e li inserisce nella pagina.
 async function init() {
   let data;
@@ -59,20 +70,24 @@ async function init() {
   if (genres.length) {
     if (data.genresLabel) $("genres-label").textContent = data.genresLabel;
     const list = $("genre-list");
-    genres.forEach((g) => {
+    genres.forEach((g, i) => {
       const li = document.createElement("li");
       li.textContent = g;
+      li.setAttribute("data-aos", "fade-up");
+      li.setAttribute("data-aos-delay", String(100 + i * 60));
       list.appendChild(li);
     });
     $("genres").hidden = false;
   }
 
   const actions = $("actions");
-  (data.actions || []).forEach((a) => {
+  (data.actions || []).forEach((a, i) => {
     const link = document.createElement("a");
     link.className = "btn" + (a.primary ? " primary" : "");
     link.href = a.url;
     link.textContent = a.label;
+    link.setAttribute("data-aos", "zoom-in");
+    link.setAttribute("data-aos-delay", String(120 + i * 80));
     if (/^https?:/.test(a.url)) {
       link.target = "_blank";
       link.rel = "noopener";
@@ -87,8 +102,10 @@ async function init() {
   else $("contact-text").remove();
 
   const info = $("info");
-  (data.info || []).forEach((i) => {
+  (data.info || []).forEach((i, idx) => {
     const li = document.createElement("li");
+    li.setAttribute("data-aos", "fade-up");
+    li.setAttribute("data-aos-delay", String(80 + idx * 70));
     const label = document.createElement("span");
     label.textContent = i.label || "";
     li.appendChild(label);
@@ -140,6 +157,7 @@ async function init() {
   }
 
   document.body.setAttribute("aria-busy", "false");
+  initScrollAnimations();
 }
 
 init();
